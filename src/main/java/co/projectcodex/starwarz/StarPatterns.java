@@ -13,7 +13,11 @@ public class StarPatterns {
      */
 
     public static void line(int size) {
-
+        String star = "* ";
+        for (int i = 0; i < size; i++) {
+//            star += star;
+            System.out.print(star);
+        }
     }
     
     /**
@@ -41,7 +45,14 @@ public class StarPatterns {
      * @param size
      */
     public static void squareStars(int size) {
+        String star = "* ";
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                System.out.print(star);
+            }
 
+            System.out.print("\n");
+        }
     }
 
 
@@ -73,7 +84,16 @@ public class StarPatterns {
      * @param size
      */
     public static void triangleBottomBase(int size) {
+        String star = "* ";
+        int value = 1;
+        for (int i = 0; i < size; i++) {
 
+            for (int j = 0; j < value; j++) {
+                System.out.print(star);
+            }
+            value++;
+            System.out.print("\n");
+        }
     }
 
     /**
@@ -102,7 +122,16 @@ public class StarPatterns {
      */
 
     public static void triangleTopBase(int size) {
+        String star = "* ";
+        int value = size;
+        for (int i = 0; i < size; i++) {
 
+            for (int j = 0; j < value; j++) {
+                System.out.print(star);
+            }
+            value--;
+            System.out.print("\n");
+        }
     }
 
     /**
@@ -128,7 +157,50 @@ public class StarPatterns {
      * @param size
      */
     public static void emptySquare(int size) {
+        String star = "* ";
+        for (int i = 0; i < size; i++) {
+            if (i == 0 || i == size - 1) {
+                for (int j = 0; j < size; j++) {
+                    System.out.print(star);
+                }
 
+            }
+            else {
+                for(int k = 0; k < size; k++) {
+                    if (k == 0 || k == size -1) {
+                        System.out.print(star);
+                    }
+                    else {
+                        System.out.print("  ");
+                    }
+                }
+            }
+            System.out.print("\n");
+        }
+    }
+    public static void diamond(int size) {
+        String star = "* ";
+        int value = size;
+        for (int i = 0; i < size; i++) {
+                for (int j = 0; j < size; j++) {
+                    if (i == (size/2)) {
+                        System.out.print(star);
+                    }
+                    else {
+                        for (int k = 0; k < size; k++) {
+                            System.out.print("  ");
+                        }
+                    }
+                }
+
+//            else {
+//                for (int k = 0; k < size; k++) {
+//                    System.out.print("  ");
+//                }
+//            }
+            value++;
+            System.out.print("\n");
+        }
     }
 
 

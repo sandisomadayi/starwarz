@@ -182,5 +182,19 @@ public class StarPatternsTest {
         assertEquals(result, outContent.toString());
     }
 
+    @Test
+    public void testDiamond() {
+        final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        diamond(5);
+        String result =
+                        "    *     \n" +
+                        "  * * *   \n" +
+                        "* * * * * \n";
+
+        assertEquals(result, outContent.toString());
+    }
+
 
 }
